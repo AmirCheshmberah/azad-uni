@@ -20,7 +20,7 @@ void destroy(Queue *queue);
 
 int main(void)
 {
-    Queue *q1 = init(5);
+    Queue *q1 = init(6);
     enQueue(q1, 16);
     enQueue(q1, 106);
     enQueue(q1, 160);
