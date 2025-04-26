@@ -31,8 +31,6 @@ int main(void)
     pop(s1);
     pop(s1);
 
-    printf("peek: %i\n", peek(s2));
-
     display(s2);
 
     destroy(s1);
