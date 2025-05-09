@@ -16,17 +16,17 @@ Node* createNode(int data);
 LinkedList* listInit(LinkedList* l);
 void prepend(LinkedList *l, int data);
 void printll(LinkedList *l);
+void destroy(LinkedList* l);
 
 int main(void)
 {
     LinkedList* l1 = listInit(l1);
     prepend(l1, 12);
     prepend(l1, 102);
-    prepend(l1, 120);
-    prepend(l1, 122);
 
     printll(l1);
 
+    destroy(l1);
 
     return 0;
 }
@@ -79,4 +79,17 @@ void printll(LinkedList *l)
         cur = cur->next;
     }
     printf("\n");
+}
+
+void destroy(LinkedList* l)
+{
+    Node* cur = l->head;
+    
+    while (cur != NULL)
+    {
+        Node* tmp = cur;
+        cur = cur->next;
+        free(tmp);
+    }
+    free(l);
 }
